@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HypotecniKalkulacka.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        
+        <Label Text="Výše úvěru:" />
+        <Entry Text="{Binding Uver}" Placeholder="Výše úvěru" Keyboard="Numeric"/>
+        <Label Text="Úroková sazba(%):" />
+        <Entry Text="{Binding UrokovaMira}" Placeholder="Úroková sazba(%)" Keyboard="Numeric"/>
+        <Label Text="Doba splácení v letech:" />
+        <Entry Text="{Binding Roky}" Placeholder="Doba splácení v letech" Keyboard="Numeric"/>
+        <Button Text="Vypočítej" Command="{Binding CommandVypocet}"/>
+
+
+        <Label Text="Výše mesíční splátky"/>
+        <Label Text="{Binding MesicniSplatka}"/>
+        <Label Text="Celkem zaplaceno"/>
+        <Label Text="{Binding CelkemZaplatite}"/>
+    </StackLayout>
+
+</ContentPage>
